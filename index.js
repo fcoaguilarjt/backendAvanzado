@@ -1,5 +1,8 @@
 
 const express = require('express')
+const colors =require('colors')
+
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -7,6 +10,6 @@ app.get('/', (req, res) => {
     res.send('Servidor funcionando')
 })
 
-app.listen(3000, () => {
-    console.log('Server iniciado en puerto 3000')
+app.listen(port, () => {
+    console.log('Server corriendo en: ', `🚀http://localhost:${port}`.blue.bold)
 })
